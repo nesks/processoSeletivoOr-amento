@@ -2,6 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 
+
+use App\Http\Controllers\OrcamentoController;
+use App\Http\Controllers\TvController;
+use App\Http\Controllers\PlayerController;
+use App\Http\Controllers\PlanoController;
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +24,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+
+Route::resource('orcamento', OrcamentoController::class);
+Route::resource('tv', TvController::class);
+Route::resource('player', PlayerController::class);
+Route::resource('plano', PlanoController::class);
